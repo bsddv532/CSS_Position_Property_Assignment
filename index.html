@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="heading"> CSS Position Property </div>
+
+    <div class="container">
+        <h2>
+            Q 1 : Explain absolute and relative position by using example and with words as well. <br>
+            Q 2 : Explain the difference between fixed and sticky
+        </h2><br>
+
+        <p class="types"> <b>The position property in CSS sets how an element is positioned in a document.</b></p>
+        <ul class="types">
+            <li><b>Static :</b> The element is positioned according to the normal flow of the document. The top, right,
+                bottom, left, and z-index properties have no effect. This is the default value. </li><br>
+
+            <li><b>Relative : </b> The element is positioned according to the normal flow of the document, and then
+                offset
+                relative to itself based on the values of top, right, bottom, and left. The offset does not affect the
+                position of any other elements; thus, the space given for the element in the page layout is the same as
+                if
+                position were static. </li><br>
+
+            <li><b>Absolute : </b> The element is removed from the normal document flow, and no space is created for the
+                element in the page layout. It is positioned relative to its closest positioned ancestor, if any;
+                otherwise,
+                it is placed relative to the initial containing block. Its final position is determined by the values of
+                top, right, bottom, and left. </li><br>
+
+            <li><b>Fixed : </b>The element is removed from the normal document flow, and no space is created for the
+                element
+                in the page layout. An element with position: fixed; is positioned relative to the viewport, which means
+                it
+                always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties
+                are
+                used to position the element.
+                A fixed element does not leave a gap in the page where it would normally have been located.</li><br>
+
+            <li><b>Sticky : </b>The element is positioned according to the normal flow of the document, and then offset
+                relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor),
+                including
+                table-related elements, based on the values of top, right, bottom, and left. The offset does not affect
+                the
+                position of any other elements. </li><br>
+        </ul>
+
+
+        <div class="box box2">Position : Absolute</div>
+
+        <div class="box box1">
+            Position : Relative
+            <div class="innerbox">Position : Absolute</div>
+        </div>
+        <br><br><br><br>
+
+        <h2><u>Difference between Fixed and Sticky position</u></h2>
+
+        <table border="1" class="table">
+            <thead>
+                <tr>
+                    <th>S.No. </th>
+                    <th>Position: Fixed</th>
+                    <th>Position: Sticky</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. </td>
+                    <td>Element with position: fixed property is fixed to the viewport and doesn’t move irrespective of
+                        scrolling.</td>
+                    <td>Element with position: sticky property can scroll to an offset value provided by the user. </td>
+                </tr>
+
+                <tr>
+                    <td>2. </td>
+                    <td>Element with position: fixed property never leaves the viewport position it was fixed to.</td>
+                    <td>Element with position: sticky property leaves the viewport when its parent element scrolls off
+                        the
+                        viewport.</td>
+                </tr>
+
+                <tr>
+                    <td>3. </td>
+                    <td>This property is supported by all the browsers.</td>
+                    <td>This property is only supported by all modern browsers.</td>
+                </tr>
+
+                <tr>
+                    <td>4. </td>
+                    <td>Element with position: fixed property does not effect the other element’s flow on the page ie it
+                        does not capture additional space. </td>
+                    <td>Element with position: sticky property does effect the other element’s flow in the page ie., it
+                        will
+                        take the additional space.</td>
+                </tr>
+
+                <tr>
+                    <td>5. </td>
+                    <td> <b>Example: </b> In this assignment the cyan color button is created by using <b>position: fixed</b> </td>
+                    <td> <b>Example: </b> The purple color header which is present in the top of the assignment is created by using
+                        <b>position: Sticky</b></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <button class="btn">Button using <br> <b>Position:Fixed </b></button>
+
+    </div>
+</body>
+
+</html>
